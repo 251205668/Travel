@@ -9,6 +9,7 @@ import './assets/styles/border.css'
 // 引入一像素边框的解决方案 可能存在2倍屏
 import fastClick from 'fastclick'
 // 解决点击300ms延迟问题
+import './assets/styles/iconfont.css'
 Vue.config.productionTip = false
 fastClick.attach(document.body)
     /* eslint-disable no-new */
