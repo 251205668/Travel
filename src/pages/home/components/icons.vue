@@ -88,6 +88,7 @@ export default {
 </script>
 <style lang='stylus' scoped>
 .icons {
+  // 向下撑蛮宽高二比一的布局
   height: 0;
   padding-bottom: 50%;
   // background: green;
@@ -95,6 +96,7 @@ export default {
 }
 
 .icon1 {
+  // 定义八个 一比一的盒子的布局
   position: relative;
   overflow: hidden;
   float: left;
@@ -105,6 +107,7 @@ export default {
 }
 
 .img-div {
+  // 图片太大 overflow  定义好图片所在的位置
   position: absolute;
   top: 0;
   left: 0;
@@ -115,6 +118,7 @@ export default {
 }
 
 p {
+  // 文字居中 位置定义好
   position: absolute;
   left: 0;
   right: 0;
@@ -126,6 +130,7 @@ p {
 }
 
 img {
+  // 完全显示一张图片 而且居中
   height: 100%;
   display: block;
   margin: 0 auto;
