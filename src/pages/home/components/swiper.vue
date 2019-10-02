@@ -26,7 +26,9 @@ export default {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
-        loop: true
+        loop: true,
+        autoplay: 3000,
+        autoplayDisableOnInteraction: false
       },
       swiperList: [{
         id: '001',
@@ -55,7 +57,8 @@ export default {
       {
         id: '007',
         imgurl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20199/cd40bfe8cc78b91664dd9eddc844b9be.jpg_750x200_e1cb5b42.jpg'
-      }]
+      }],
+
     };
   },
 
@@ -65,7 +68,14 @@ export default {
 
   beforeMount () { },
 
-  mounted () { },
+  mounted () {
+    // setInterval(() => {
+    //   console.log('simulate async data')
+    //   if (this.swiperList.length < 7) {
+    //     this.swiperList.push(this.swiperList.length + 1)
+    //   }
+    // }, 2000)
+  },
 
   methods: {},
 
@@ -88,7 +98,7 @@ export default {
   width: 100%;
   height: 0;
   overflow: hidden;
-  padding-bottom: 31.25%;
+  padding-bottom: 27%;
   // background: #eee;
 }
 </style>
