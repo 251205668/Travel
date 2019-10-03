@@ -127,6 +127,7 @@ export default {
   padding-bottom: 50%;
   // background: green;
   overflow: hidden;
+  margin-top: 0.2rem;
 }
 
 .icon1 {
