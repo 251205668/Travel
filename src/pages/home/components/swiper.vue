@@ -1,8 +1,9 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption"
+            v-if="list.length">
       <!-- slides -->
-      <swiper-slide v-for="item of swiperList"
+      <swiper-slide v-for="item of list"
                     :key="item.id">
         <img class="swiper"
              :src="item.imgurl"
@@ -19,7 +20,9 @@
 
 export default {
   name: 'HomeSwiper',
-  props: [''],
+  props: {
+    list: Array
+  },
   data () {
     return {
       swiperOption: {
@@ -28,34 +31,7 @@ export default {
         autoplay: 3000,
         autoplayDisableOnInteraction: false
       },
-      swiperList: [{
-        id: '001',
-        imgurl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20199/47f7d9e9fb7c5cb88a1245180c9ca5b4.jpg_750x200_de4858e1.jpg'
-      },
-      {
-        id: '002',
-        imgurl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20199/0fa39f9f5e66189e85b5c6e54278587d.jpg_750x200_86c8f2d8.jpg'
-      },
-      {
-        id: '003',
-        imgurl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20199/9b5dd778a3e717f95bf9dfd28140283b.jpg_750x200_33b4a213.jpg'
-      },
-      {
-        id: '004',
-        imgurl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20199/249dfa53de67b8824a96f9821e58f30d.jpg_750x200_48bf24d9.jpg'
-      },
-      {
-        id: '005',
-        imgurl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20197/0645bd625b46216a55e3835d0f677ce2.jpg_750x200_1e9a0cbf.jpg'
-      },
-      {
-        id: '006',
-        imgurl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20199/bc504af704ef02fbc0455fdbab8635ee.jpg_750x200_fa9cad2a.jpg'
-      },
-      {
-        id: '007',
-        imgurl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20199/cd40bfe8cc78b91664dd9eddc844b9be.jpg_750x200_e1cb5b42.jpg'
-      }],
+
 
     };
   },

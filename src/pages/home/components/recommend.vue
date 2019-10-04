@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-tittle"> 热销推荐</div>
     <ul>
-      <li v-for="item of recommendList"
+      <li v-for="item of relist"
           :key="item.id"
           class="item border-bottom">
         <div class="item-img-div">
@@ -24,53 +24,12 @@
 
 export default {
   name: 'Homerecommend',
-  props: [''],
+  props: {
+    relist: Array
+  },
   data () {
     return {
-      recommendList: [
-        {
-          id: "001",
-          imgurl: 'http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg',
-          title: '上海迪士尼乐园',
-          desc: '上海市浦东新区川沙新镇上海迪士尼度假区内'
 
-        },
-        {
-          id: "002",
-          imgurl: 'http://img1.qunarzz.com/sight/p0/1908/c8/c8f722801de63d7ca3.img.jpg_200x200_592ccf80.jpg',
-          title: '上海野生动物园',
-          desc: '上海市浦东新区南六公路178号'
-
-        },
-        {
-          id: "003",
-          imgurl: 'http://img1.qunarzz.com/sight/p0/1906/19/19b7939928a0200da3.img.jpg_200x200_6879c7f7.jpg',
-          title: '上海海昌海洋公园',
-          desc: '上海市浦东新区南汇城银飞路166号'
-
-        },
-        {
-          id: "004",
-          imgurl: 'http://img1.qunarzz.com/sight/p0/1412/9f/fbff2a5302c0ce906ef9b64159730f89.water.jpg_200x200_87806940.jpg',
-          title: '上海海洋水族馆',
-          desc: '上海市浦东新区陆家嘴环路1388号（近东方明珠）'
-
-        },
-        {
-          id: "005",
-          imgurl: 'http://img1.qunarzz.com/tuan/team2/1507/2c/83e0e0e7ae082a.jpg_200x200_6d7378b2.jpg',
-          title: '东方明珠',
-          desc: '上海市浦东新区世纪大道1号'
-
-        },
-        {
-          id: "006",
-          imgurl: 'http://img1.qunarzz.com/sight/p0/1411/4f/146031f0bc5d7e0dd960d3f5bf0c9eca.water.jpg_200x200_f22705c9.jpg',
-          title: '上海科技馆',
-          desc: '上海市浦东新区世纪大道2000号(近二号线上海科技馆站)'
-
-        }
-      ]
     };
   },
 

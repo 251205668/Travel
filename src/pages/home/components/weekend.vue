@@ -90,7 +90,6 @@ export default {
 </script>
 <style lang='stylus' scoped>
 .recommend-tittle {
-  margin-top: 0.2rem;
   line-height: 0.8rem;
   background: #eee;
   text-indent: 0.2rem;
@@ -99,7 +98,7 @@ export default {
 .item-img-div {
   height: 0;
   overflow: hidden;
-  padding-bottom: 33.9%;
+  padding-bottom: 37.09%;
   // 保持3:1宽高
 }
 
