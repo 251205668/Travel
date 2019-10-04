@@ -1,11 +1,13 @@
 <template>
   <div>
     <City-Header></City-Header>
+    <City-Search></City-Search>
   </div>
 </template>
 
 <script>
 import CityHeader from './components/Header'
+import CitySearch from './components/search'
 export default {
 
   name: 'City',
@@ -18,7 +20,8 @@ export default {
 
   components: {
 
-    CityHeader
+    CityHeader,
+    CitySearch
   },
 
   computed: {},
