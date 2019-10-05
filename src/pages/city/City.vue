@@ -2,12 +2,14 @@
   <div>
     <City-Header></City-Header>
     <City-Search></City-Search>
+    <cityList></cityList>
   </div>
 </template>
 
 <script>
 import CityHeader from './components/Header'
 import CitySearch from './components/search'
+import cityList from './components/cityList'
 export default {
 
   name: 'City',
@@ -21,7 +23,8 @@ export default {
   components: {
 
     CityHeader,
-    CitySearch
+    CitySearch,
+    cityList
   },
 
   computed: {},
