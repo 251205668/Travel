@@ -1,6 +1,5 @@
 <template>
-  <div class="list"
-       ref="wrapper">
+  <div class="list">
     <div>
       <div class="area">
         <div class="title border-topbottom">当前城市</div>
@@ -130,7 +129,7 @@
 </template>
 
 <script> 
-import Bscroll from 'better-scroll'
+
 export default {
   name: 'cityList',
   props: [''],
@@ -146,10 +145,7 @@ export default {
 
   beforeMount () { },
 
-  mounted () {
-    this.scroll = new Bscroll(this.$refs.wrapper)
-    // 页面挂载后 wrapper dom使用Bscroll插件
-  },
+  mounted () { },
 
   methods: {},
 
@@ -158,7 +154,6 @@ export default {
 }
 
 </script>
-
 <style lang='stylus' scoped>
 @import '~@/assets/styles/varibles.styl';
 
@@ -188,7 +183,7 @@ export default {
 }
 
 .title {
-  line-height: 0.54rem;
+  line-height: 0.4rem;
   background: #eee;
   padding-left: 0.2rem;
   color: #666;

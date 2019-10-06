@@ -188,7 +188,7 @@ export default {
 }
 
 .title {
-  line-height: 0.54rem;
+  line-height: 0.4rem;
   background: #eee;
   padding-left: 0.2rem;
   color: #666;

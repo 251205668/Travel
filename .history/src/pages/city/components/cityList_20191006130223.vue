@@ -130,7 +130,7 @@
 </template>
 
 <script> 
-import Bscroll from 'better-scroll'
+
 export default {
   name: 'cityList',
   props: [''],
@@ -146,10 +146,7 @@ export default {
 
   beforeMount () { },
 
-  mounted () {
-    this.scroll = new Bscroll(this.$refs.wrapper)
-    // 页面挂载后 wrapper dom使用Bscroll插件
-  },
+  mounted () { },
 
   methods: {},
 
@@ -158,7 +155,7 @@ export default {
 }
 
 </script>
-
+import BScroll from 'better-scroll'
 <style lang='stylus' scoped>
 @import '~@/assets/styles/varibles.styl';
 
@@ -188,7 +185,7 @@ export default {
 }
 
 .title {
-  line-height: 0.54rem;
+  line-height: 0.4rem;
   background: #eee;
   padding-left: 0.2rem;
   color: #666;
