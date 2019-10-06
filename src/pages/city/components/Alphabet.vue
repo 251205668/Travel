@@ -1,8 +1,13 @@
 <template>
   <ul class="list">
     <li class="item"
-        v-for="(item,key) of cities"
-        :key="key">{{key}}</li>
+        v-for="item of letters"
+        :key="item"
+        :ref="item"
+        @touchstart="handleTouchStart"
+        @touchmove="handleTouchMove"
+        @touchend="handleTouchEnd"
+        @click="handleclick">{{item}}</li>
   </ul>
 </template>
 
@@ -13,21 +18,59 @@ export default {
   props: {
     cities: Object
   },
+
   data () {
     return {
-
+      touchStatus: false
     };
   },
 
   components: {},
 
-  computed: {},
+  computed: {
+    letters () {
+      // 构建letters数组
+      const letters = []
+      for (let i in this.cities) {
+        letters.push(i)
+      }
+      return letters
+    }
+
+  },
 
   beforeMount () { },
 
   mounted () { },
 
-  methods: {},
+  methods: {
+    handleclick (e) {
+      this.$emit("change", e.target.innerText)
+      // console.log(e.target.innerText)
+      // 打印出事件对象的内容
+    },
+    handleTouchStart () {
+      this.touchStatus = true
+
+    },
+    handleTouchMove (e) {
+      // 具体思路：根据字母距离A字母的高度差 算出当前对应字母的下标  再将数组下标对应元素传递给父组件
+      if (this.touchStatus) {
+        const startY = this.$refs['A'][0].offsetTop
+        // 计算出A元素顶部距蓝色底部的高度  （offsetTop距离上方控件的距离）
+        const touchY = e.touches[0].clientY - 79
+        // 计算出 当前字母距离蓝色底部的高度（通过e事件的touches数组  clientY距离浏览器有效区域y轴距离）
+        const index = Math.floor((touchY - startY) / 20)
+        if (index >= 0 && index < this.letters.length) {
+          this.$emit('change', this.letters[index])
+        }
+      }
+    },
+    handleTouchEnd () {
+      this.touchStatus = false
+
+    }
+  },
 
   watch: {}
 

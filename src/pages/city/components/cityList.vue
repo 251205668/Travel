@@ -25,7 +25,8 @@
 
       <div class="area"
            v-for="(item, key) of cities"
-           :key="key">
+           :key="key"
+           :ref="key">
         <div class="title border-topbottom">{{key}}</div>
         <div class="item-list">
           <div class="item border-bottom"
@@ -45,6 +46,7 @@ import Bscroll from 'better-scroll'
 export default {
   name: 'cityList',
   props: {
+    letter: String,
     hot: Array,
     cities: Object
 
@@ -69,7 +71,17 @@ export default {
 
   methods: {},
 
-  watch: {}
+  watch: {
+    letter () {
+      // 当监听到letter变化 则list 滚动到key为letter的页面
+      if (this.letter) {
+        // 获取点击的dom 字母  因为是循环的ref 所以数组 但是这个数组里只有一个元素
+        const element = this.$refs[this.letter][0]
+        // console.log(element)
+        this.scroll.scrollToElement(element)
+      }
+    }
+  }
 
 }
 
