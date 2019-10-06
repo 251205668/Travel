@@ -1,0 +1,143 @@
+{
+    "ret": true,
+    "data": {
+        "city": "北京",
+        "swiperList": [{
+                "id": "001",
+                "imgurl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20199/47f7d9e9fb7c5cb88a1245180c9ca5b4.jpg_750x200_de4858e1.jpg"
+            },
+            {
+                "id": "002",
+                "imgurl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20199/0fa39f9f5e66189e85b5c6e54278587d.jpg_750x200_86c8f2d8.jpg"
+            },
+            {
+                "id": "003",
+                "imgurl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20199/9b5dd778a3e717f95bf9dfd28140283b.jpg_750x200_33b4a213.jpg"
+            },
+            {
+                "id": "004",
+                "imgurl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20199/249dfa53de67b8824a96f9821e58f30d.jpg_750x200_48bf24d9.jpg"
+            },
+            {
+                "id": "005",
+                "imgurl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20197/0645bd625b46216a55e3835d0f677ce2.jpg_750x200_1e9a0cbf.jpg"
+            },
+            {
+                "id": "006",
+                "imgurl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20199/bc504af704ef02fbc0455fdbab8635ee.jpg_750x200_fa9cad2a.jpg"
+            },
+            {
+                "id": "007",
+                "imgurl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20199/cd40bfe8cc78b91664dd9eddc844b9be.jpg_750x200_e1cb5b42.jpg"
+            }
+        ],
+
+        "iconList": [{
+            "id": "0001",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
+            "desc": "景点门票"
+        }, {
+            "id": "0002",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1711/df/86cbcfc533330d02.png",
+            "desc": "滑雪季"
+        }, {
+            "id": "0003",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1710/a6/83f636bd75ae6302.png",
+            "desc": "泡温泉"
+        }, {
+            "id": "0004",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png",
+            "desc": "动植园"
+        }, {
+            "id": "0005",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/d0/e09575e66f4aa402.png",
+            "desc": "游乐园"
+        }, {
+            "id": "0006",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/59/569d3c096e542502.png",
+            "desc": "必游榜单"
+        }, {
+            "id": "0007",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/17/4bd370f3eb1acd02.png",
+            "desc": "演出"
+        }, {
+            "id": "0008",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/7f/b1ea3c8c7fb6db02.png",
+            "desc": "城市观光"
+        }, {
+            "id": "0009",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png",
+            "desc": "一日游"
+        }],
+        "recommendList": [{
+                "id": "001",
+                "imgurl": "http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg",
+                "title": "上海迪士尼乐园",
+                "desc": "上海市浦东新区川沙新镇上海迪士尼度假区内"
+
+            },
+            {
+                "id": "002",
+                "imgurl": "http://img1.qunarzz.com/sight/p0/1908/c8/c8f722801de63d7ca3.img.jpg_200x200_592ccf80.jpg",
+                "title": "上海野生动物园",
+                "desc": "上海市浦东新区南六公路178号"
+
+            },
+            {
+                "id": "003",
+                "imgurl": "http://img1.qunarzz.com/sight/p0/1906/19/19b7939928a0200da3.img.jpg_200x200_6879c7f7.jpg",
+                "title": "上海海昌海洋公园",
+                "desc": "上海市浦东新区南汇城银飞路166号"
+
+            },
+            {
+                "id": "004",
+                "imgurl": "http://img1.qunarzz.com/sight/p0/1412/9f/fbff2a5302c0ce906ef9b64159730f89.water.jpg_200x200_87806940.jpg",
+                "title": "上海海洋水族馆",
+                "desc": "上海市浦东新区陆家嘴环路1388号（近东方明珠）"
+
+            },
+            {
+                "id": "005",
+                "imgurl": "http://img1.qunarzz.com/tuan/team2/1507/2c/83e0e0e7ae082a.jpg_200x200_6d7378b2.jpg",
+                "title": "东方明珠",
+                "desc": "上海市浦东新区世纪大道1号"
+
+            },
+            {
+                "id": "006",
+                "imgurl": "http://img1.qunarzz.com/sight/p0/1411/4f/146031f0bc5d7e0dd960d3f5bf0c9eca.water.jpg_200x200_f22705c9.jpg",
+                "title": "上海科技馆",
+                "desc": "上海市浦东新区世纪大道2000号(近二号线上海科技馆站)"
+
+            }
+        ],
+
+        "weekendList": [{
+            "id": "0001",
+            "imgUrl": "http://img1.qunarzz.com/sight/source/1510/6e/1ea71e2f04e.jpg_r_640x214_aa6f091d.jpg",
+            "title": "北京温泉排行榜",
+            "desc": "细数北京温泉，温暖你的冬天"
+        }, {
+            "id": "0002",
+            "imgUrl": "http://img1.qunarzz.com/sight/source/1505/aa/7baaf8a851d221.jpg_r_640x214_1431200f.jpg",
+            "title": "北京必游TOP10",
+            "desc": "来北京必去的景点非这些地方莫属"
+        }, {
+            "id": "0003",
+            "imgUrl": "http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg",
+            "title": "寻找北京的皇城范儿",
+            "desc": "数百年的宫廷庙宇，至今依旧威严霸气"
+        }, {
+            "id": "0004",
+            "imgUrl": "http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
+            "title": "学生最爱的博物馆",
+            "desc": "周末干嘛？北京很多博物馆已经免费开放啦"
+        }, {
+            "id": "0005",
+            "imgUrl": "http://img1.qunarzz.com/sight/source/1505/b2/fde1bfcd057a52.jpg_r_640x214_bbf3fa44.jpg",
+            "title": "儿童剧场，孩子的乐园",
+            "desc": "带宝贝观看演出，近距离体验艺术的无穷魅力"
+        }]
+    }
+}
