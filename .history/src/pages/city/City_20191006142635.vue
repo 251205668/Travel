@@ -4,7 +4,7 @@
     <City-Search></City-Search>
     <cityList :hot="hotCities"
               :cities="cities"></cityList>
-    <Alphabet :cities="cities"></Alphabet>
+    <Alphabet></Alphabet>
   </div>
 </template>
 

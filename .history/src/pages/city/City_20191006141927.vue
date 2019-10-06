@@ -4,7 +4,7 @@
     <City-Search></City-Search>
     <cityList :hot="hotCities"
               :cities="cities"></cityList>
-    <Alphabet :cities="cities"></Alphabet>
+    <Alphabet></Alphabet>
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
   props: [''],
   data () {
     return {
-      cities: {},
+      cities: "",
       hotCities: []
     };
   },
@@ -43,8 +43,7 @@ export default {
   },
   methods: {
     getCityInfo () {
-      axios.get('/api/city.json')
-        .then(this.handlecityajax)
+      axios.get('/api/city.json').then(this.handlecityajax)
     },
     handlecityajax (res) {
       res = res.data
@@ -53,7 +52,6 @@ export default {
         this.cities = data.cities
         this.hotCities = data.hotCities
       }
-      console.log(res)
     },
 
   }

@@ -22,21 +22,19 @@
 
         </div>
       </div>
-
-      <div class="area"
-           v-for="(item, key) of cities"
-           :key="key">
-        <div class="title border-topbottom">{{key}}</div>
-        <div class="item-list">
-          <div class="item border-bottom"
-               v-for="innerItem of item"
-               :key="innerItem.id">
-            {{innerItem.name}}
+      <div class="area"  v-for="(item,key)of cities" :key="key">
+        <div class="title border-topbottom"
+       
+        >{{key}}</div>
+           <div class="item-list" v-for="inneritem of item" :key="inneritem.id">
+          <div class="item border-bottom">
+           {{inneritem.name}}
           </div>
+         
+
         </div>
       </div>
-
-    </div>
+   
   </div>
 </template>
 

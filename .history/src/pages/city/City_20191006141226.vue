@@ -2,9 +2,9 @@
   <div>
     <City-Header></City-Header>
     <City-Search></City-Search>
-    <cityList :hot="hotCities"
+    <cityList :hotCities="hotCities"
               :cities="cities"></cityList>
-    <Alphabet :cities="cities"></Alphabet>
+    <Alphabet></Alphabet>
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
   props: [''],
   data () {
     return {
-      cities: {},
+      cities: "",
       hotCities: []
     };
   },
@@ -43,17 +43,17 @@ export default {
   },
   methods: {
     getCityInfo () {
-      axios.get('/api/city.json')
-        .then(this.handlecityajax)
+      axios.get('/api/city.json').then(this.handlecityajax)
     },
     handlecityajax (res) {
+      // 当获取到ajax内容 拿出数据
       res = res.data
       if (res.ret && res.data) {
+        // 如果获取到这个resdata 并且resdata存在 那么就把resdata里的city赋给组件属性
         const data = res.data
         this.cities = data.cities
         this.hotCities = data.hotCities
       }
-      console.log(res)
     },
 
   }

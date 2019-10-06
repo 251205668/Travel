@@ -4,7 +4,7 @@
     <City-Search></City-Search>
     <cityList :hot="hotCities"
               :cities="cities"></cityList>
-    <Alphabet :cities="cities"></Alphabet>
+    <Alphabet></Alphabet>
   </div>
 </template>
 
@@ -47,12 +47,12 @@ export default {
         .then(this.handlecityajax)
     },
     handlecityajax (res) {
-      res = res.data
-      if (res.ret && res.data) {
-        const data = res.data
-        this.cities = data.cities
-        this.hotCities = data.hotCities
-      }
+      // res = res.data
+      // if (res.ret && res.data) {
+      //   const data = res.data
+      //   this.cities = data.cities
+      //   this.hotCities = data.hotCities
+      // }
       console.log(res)
     },
 

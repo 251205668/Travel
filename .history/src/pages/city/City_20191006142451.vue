@@ -4,7 +4,7 @@
     <City-Search></City-Search>
     <cityList :hot="hotCities"
               :cities="cities"></cityList>
-    <Alphabet :cities="cities"></Alphabet>
+    <Alphabet></Alphabet>
   </div>
 </template>
 
@@ -53,7 +53,6 @@ export default {
         this.cities = data.cities
         this.hotCities = data.hotCities
       }
-      console.log(res)
     },
 
   }
