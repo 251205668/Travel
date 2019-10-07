@@ -21,12 +21,17 @@ export default {
 
   data () {
     return {
-      touchStatus: false
+      touchStatus: false,
+      startY: 0,
+      timer: null
     };
   },
 
   components: {},
-
+  updated () {
+    this.startY = this.$refs['A'][0].offsetTop
+    // 每次页面被渲染后都会计算出 startY高度 性能提升
+  },
   computed: {
     letters () {
       // 构建letters数组
@@ -55,15 +60,26 @@ export default {
     },
     handleTouchMove (e) {
       // 具体思路：根据字母距离A字母的高度差 算出当前对应字母的下标  再将数组下标对应元素传递给父组件
+      // if (this.touchStatus) {
+
+      //   // 计算出A元素顶部距蓝色底部的高度  （offsetTop距离上方控件的距离）
+      //   const touchY = e.touches[0].clientY - 79
+      //   // 计算出 当前字母距离蓝色底部的高度（通过e事件的touches数组  clientY距离浏览器有效区域y轴距离）
+      //   const index = Math.floor((touchY - this.startY) / 20)
+
+      // }
       if (this.touchStatus) {
-        const startY = this.$refs['A'][0].offsetTop
-        // 计算出A元素顶部距蓝色底部的高度  （offsetTop距离上方控件的距离）
-        const touchY = e.touches[0].clientY - 79
-        // 计算出 当前字母距离蓝色底部的高度（通过e事件的touches数组  clientY距离浏览器有效区域y轴距离）
-        const index = Math.floor((touchY - startY) / 20)
-        if (index >= 0 && index < this.letters.length) {
-          this.$emit('change', this.letters[index])
+        if (this.timer) {
+          clearTimeout(this.timer);
         }
+        // 定义函数节流方式 清除上一个鼠标滑动    如果正在做手指滚动事情 延迟十六毫秒 如果执行下一次 这需要清除上一次再继续 节约执行频率 防抖
+        this.timer = setTimeout(() => {
+          const touchY = e.touches[0].clientY - 79;
+          const index = Math.floor((touchY - this.startY) / 20)
+          if (index >= 0 && index < this.letters.length) {
+            this.$emit('change', this.letters[index])
+          }
+        }, 16);
       }
     },
     handleTouchEnd () {
