@@ -11,6 +11,7 @@
          v-show="keyword">
       <ul>
         <li class="search-item border-topbottom "
+            @click="handleCityclick(item.name)"
             v-for="item of list"
             :key="item.name">{{item.name}}</li>
         <!-- 如果不存在list里没有内容 就显示 -->
@@ -48,7 +49,14 @@ export default {
     this.scroll = new Bscroll(this.$refs.search)
   },
 
-  methods: {},
+  methods: {
+    handleCityclick (city) {
+      this.$store.dispatch('changeCity', city)
+      //  第一步 将city派发给action
+      this.$router.push('/')
+      //   路由跳转的另一种写法
+    }
+  },
 
   watch: {
     keyword () {

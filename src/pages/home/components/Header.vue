@@ -7,20 +7,28 @@
     </div>
     <div class="header-input"><span class="iconfont">&#xe632;</span><span class="tui">输入城市景点或游玩主题</span></div>
     <router-link to="/city">
-      <div class="header-right">{{this.city}}<span class="iconfont selecticon">&#xe64a;</span></div>
+      <div class="header-right">{{this.currentcity}}<span class="iconfont selecticon">&#xe64a;</span></div>
     </router-link>
 
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: "HomeHeader",
   props: {
-    city: String
-  }
+
+  },
+  computed: {
+    ...mapState({
+      currentcity: 'city'
+    })
+    // mapState 把vuex里面的数据映射到计算属性中 将city映射到currentcity这个对象中 上面就可以直接使用 this.currentcity引用数据
+  },
 };
 </script>
+
  <style lang="stylus" scoped>
  @import '~@/assets/styles/varibles.styl';
 
@@ -58,7 +66,7 @@ export default {
  }
 
  .header-right {
-   width: 1.24rem;
+   min-width: 1.24rem;
    float: right;
    text-align: center;
    color: #fff;

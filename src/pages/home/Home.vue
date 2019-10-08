@@ -1,6 +1,6 @@
 <template>
   <div>
-    <home-header :city="city"></home-header>
+    <home-header></home-header>
     <HomeSwiper :list="swiperList"></HomeSwiper>
     <HomeIcons></HomeIcons>
     <Homerecommend :relist="recommendList"></Homerecommend>
@@ -20,7 +20,6 @@ export default {
   name: "Home",
   data () {
     return {
-      city: "",
       swiperList: [],
       recommendList: []
 
@@ -45,11 +44,10 @@ export default {
       if (res.ret && res.data) {
         // 如果获取到这个resdata 并且resdata存在 那么就把resdata里的city赋给组件属性
         const data = res.data
-        this.city = data.city
         this.swiperList = data.swiperList
         this.recommendList = data.recommendList
       }
-      console.log(res)
+
     }
   },
   mounted () {

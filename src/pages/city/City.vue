@@ -60,7 +60,7 @@ export default {
         this.cities = data.cities
         this.hotCities = data.hotCities
       }
-      console.log(res)
+
     },
 
   }
