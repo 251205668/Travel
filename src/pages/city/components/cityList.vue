@@ -64,6 +64,7 @@ export default {
 
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper)
+    this.scroll.refresh()
     // 页面挂载后 wrapper dom使用Bscroll插件
     // console.log(hot)
   },
@@ -79,6 +80,7 @@ export default {
         // console.log(element)
         this.scroll.scrollToElement(element)
       }
+      this.scroll.refresh()
     }
   }
 
