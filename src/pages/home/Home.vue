@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/swiper'
 import HomeIcons from './components/icons'
@@ -20,6 +21,7 @@ export default {
   name: "Home",
   data () {
     return {
+      lastCity: '',
       swiperList: [],
       recommendList: []
 
@@ -33,9 +35,12 @@ export default {
     HomeWeekend
     // vue能够识别组件的大小写 而且会用分隔符展开
   },
+  computed: {
+    ...mapState(['city'])
+  },
   methods: {
     getHomeInfo () {
-      axios.get('/api/index.json').then(this.getHomeInfoSucc)
+      axios.get('/api/index.json?city=' + this.city).then(this.getHomeInfoSucc)
       // axios get发送请求后返回的是一个promise对象 用then（this.getHOmeInfoSucc）来请求ajax数据打印结果
     },
     getHomeInfoSucc (res) {
@@ -50,8 +55,12 @@ export default {
 
     }
   },
-  mounted () {
-    this.getHomeInfo()
+  activated () {
+    //   当keep-alive组件被激活时 这个生命周期函数被调用 相当于页面每次被渲染时 调用该函数
+    if (this.lastCity !== this.city) {
+      this.lastCity = this.city
+      this.getHomeInfo()
+    }
   },
 };
 </script>
