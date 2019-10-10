@@ -17,13 +17,16 @@
       </div>
 
     </div>
-    <CommonGallary v-show="showGallary"
-                   @close="closeGallary"></CommonGallary>
+    <Fade>
+      <CommonGallary v-show="showGallary"
+                     @close="closeGallary"></CommonGallary>
+    </Fade>
   </div>
 </template>
 
 <script>
 import CommonGallary from '@/common/gallary/Gallery.vue'
+import Fade from '@/common/fade/Fade.vue'
 export default {
   name: 'DetailBanner',
   props: [''],
@@ -34,7 +37,8 @@ export default {
   },
 
   components: {
-    CommonGallary
+    CommonGallary,
+    Fade
   },
 
   computed: {},
