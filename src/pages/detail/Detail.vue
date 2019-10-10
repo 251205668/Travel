@@ -1,11 +1,14 @@
 <template>
   <div>
     <DetailBanner></DetailBanner>
+    <DetailHeader></DetailHeader>
+    <div class="content"></div>
   </div>
 </template>
 
 <script>
 import DetailBanner from './components/Banner.vue'
+import DetailHeader from './components/Header.vue'
 export default {
   name: 'Detail',
   props: [''],
@@ -16,7 +19,8 @@ export default {
   },
 
   components: {
-    DetailBanner
+    DetailBanner,
+    DetailHeader
   },
 
   computed: {},
@@ -32,4 +36,8 @@ export default {
 }
 
 </script>
-<style lang='stylus' scoped></style>
+<style lang='stylus' scoped>
+.content {
+  height: 50rem;
+}
+</style>

@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="banner">
+    <div class="banner"
+         @click="showCommonGallary">
       <img class="banner-img"
            src="http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_350x240_a8e4d8a8.jpg"
            alt="">
@@ -16,21 +17,25 @@
       </div>
 
     </div>
+    <CommonGallary v-show="showGallary"
+                   @close="closeGallary"></CommonGallary>
   </div>
 </template>
 
 <script>
-
+import CommonGallary from '@/common/gallary/Gallery.vue'
 export default {
   name: 'DetailBanner',
   props: [''],
   data () {
     return {
-
+      showGallary: false
     };
   },
 
-  components: {},
+  components: {
+    CommonGallary
+  },
 
   computed: {},
 
@@ -38,7 +43,15 @@ export default {
 
   mounted () { },
 
-  methods: {},
+  methods: {
+    //   点击banner 显示轮播 点击画廊外侧 隐藏轮播
+    showCommonGallary () {
+      this.showGallary = true
+    },
+    closeGallary () {
+      this.showGallary = false
+    }
+  },
 
   watch: {}
 
@@ -80,7 +93,7 @@ export default {
   margin-top: 0.14rem;
   padding: 0 0.4rem;
   border-radius: 0.2rem;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
   font-size: 0.24rem;
 
   .banner-icon {
