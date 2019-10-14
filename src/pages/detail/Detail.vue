@@ -45,7 +45,8 @@ export default {
 
       },
       {
-        title: '儿童票',
+        title: '儿童偏偏',
+
 
       }]
     };
