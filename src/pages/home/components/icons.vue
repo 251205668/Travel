@@ -97,13 +97,13 @@ export default {
   data () {
     return {
       swiperOption: {
-        pagination: '.swiper-pagination',
+        pagination: '.swiper-pagination'
         // loop: true,
         // autoplay: 3000,
         // autoplayDisableOnInteraction: false
       }
 
-    };
+    }
   },
 
   components: {},

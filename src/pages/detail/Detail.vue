@@ -22,7 +22,7 @@ export default {
         children: [{
           title: '成人三管连票',
           children: [{
-            title: "成人三管连票-单价优惠"
+            title: '成人三管连票-单价优惠'
           }]
         },
         {
@@ -33,7 +33,7 @@ export default {
         children: [{
           title: '学生三管连票',
           children: [{
-            title: "学生三管连票-单价优惠"
+            title: '学生三管连票-单价优惠'
           }]
         },
         {
@@ -45,11 +45,10 @@ export default {
 
       },
       {
-        title: '儿童票',
-
+        title: '儿童票'
 
       }]
-    };
+    }
   },
 
   components: {

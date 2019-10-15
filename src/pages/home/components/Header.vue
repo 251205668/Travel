@@ -16,7 +16,7 @@
 <script>
 import { mapState } from 'vuex'
 export default {
-  name: "HomeHeader",
+  name: 'HomeHeader',
   props: {
 
   },
@@ -25,8 +25,8 @@ export default {
       currentcity: 'city'
     })
     // mapState 把vuex里面的数据映射到计算属性中 将city映射到currentcity这个对象中 上面就可以直接使用 this.currentcity引用数据
-  },
-};
+  }
+}
 </script>
 
  <style lang="stylus" scoped>
@@ -76,4 +76,3 @@ export default {
    font-size: 0.3rem;
  }
 </style>
- 

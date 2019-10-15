@@ -22,10 +22,10 @@ export default {
   props: [''],
   data () {
     return {
-      letter: "",
+      letter: '',
       cities: {},
       hotCities: []
-    };
+    }
   },
 
   components: {
@@ -42,7 +42,6 @@ export default {
 
   mounted () {
     this.getCityInfo()
-
   },
   methods: {
     handlechange (letter) {
@@ -60,8 +59,7 @@ export default {
         this.cities = data.cities
         this.hotCities = data.hotCities
       }
-
-    },
+    }
 
   }
 }

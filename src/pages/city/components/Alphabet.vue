@@ -24,7 +24,7 @@ export default {
       touchStatus: false,
       startY: 0,
       timer: null
-    };
+    }
   },
 
   components: {},
@@ -50,13 +50,12 @@ export default {
 
   methods: {
     handleclick (e) {
-      this.$emit("change", e.target.innerText)
+      this.$emit('change', e.target.innerText)
       // console.log(e.target.innerText)
       // 打印出事件对象的内容
     },
     handleTouchStart () {
       this.touchStatus = true
-
     },
     handleTouchMove (e) {
       // 具体思路：根据字母距离A字母的高度差 算出当前对应字母的下标  再将数组下标对应元素传递给父组件
@@ -70,21 +69,20 @@ export default {
       // }
       if (this.touchStatus) {
         if (this.timer) {
-          clearTimeout(this.timer);
+          clearTimeout(this.timer)
         }
         // 定义函数节流方式 清除上一个鼠标滑动    如果正在做手指滚动事情 延迟十六毫秒 如果执行下一次 这需要清除上一次再继续 节约执行频率 防抖
         this.timer = setTimeout(() => {
-          const touchY = e.touches[0].clientY - 79;
+          const touchY = e.touches[0].clientY - 79
           const index = Math.floor((touchY - this.startY) / 20)
           if (index >= 0 && index < this.letters.length) {
             this.$emit('change', this.letters[index])
           }
-        }, 16);
+        }, 16)
       }
     },
     handleTouchEnd () {
       this.touchStatus = false
-
     }
   },
 

@@ -36,7 +36,7 @@ export default {
       keyword: '',
       list: [],
       timer: null
-    };
+    }
   },
 
   components: {},
@@ -77,11 +77,10 @@ export default {
               value.name.indexOf(this.keyword) > -1) {
               result.push(value)
             }
-          });
+          })
         }
         this.list = result
       }, 100)
-
     }
   }
 

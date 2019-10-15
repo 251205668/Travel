@@ -41,9 +41,9 @@ export default {
         observer: true
         // autoplay: 3000,
         // autoplayDisableOnInteraction: false
-      },
+      }
 
-    };
+    }
   },
 
   components: {},
@@ -56,7 +56,7 @@ export default {
 
   methods: {
     handleclick () {
-      this.$emit("close")
+      this.$emit('close')
     }
   },
 

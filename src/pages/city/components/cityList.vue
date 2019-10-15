@@ -42,7 +42,7 @@
   </div>
 </template>
 
-<script> 
+<script>
 import Bscroll from 'better-scroll'
 export default {
   name: 'cityList',
@@ -55,7 +55,7 @@ export default {
   data () {
     return {
 
-    };
+    }
   },
 
   components: {},

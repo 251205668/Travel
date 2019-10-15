@@ -18,7 +18,7 @@ import Homerecommend from './components/recommend'
 import HomeWeekend from './components/weekend'
 import axios from 'axios'
 export default {
-  name: "Home",
+  name: 'Home',
   data () {
     return {
       lastCity: '',
@@ -52,7 +52,6 @@ export default {
         this.swiperList = data.swiperList
         this.recommendList = data.recommendList
       }
-
     }
   },
   activated () {
@@ -61,9 +60,8 @@ export default {
       this.lastCity = this.city
       this.getHomeInfo()
     }
-  },
-};
+  }
+}
 </script>
  <style  >
 </style>
- 

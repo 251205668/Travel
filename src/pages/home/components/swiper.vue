@@ -30,10 +30,9 @@ export default {
         loop: true,
         autoplay: 3000,
         autoplayDisableOnInteraction: false
-      },
+      }
 
-
-    };
+    }
   },
 
   components: {},

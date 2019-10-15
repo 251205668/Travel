@@ -33,15 +33,15 @@ export default {
         opacity: 0
       },
       showabs: true
-    };
+    }
   },
   activated () {
-    window.addEventListener("scroll", this.hanldescroll)
+    window.addEventListener('scroll', this.hanldescroll)
   },
   deactivated () {
     //   页面隐藏时执行
     // 解绑事件 防止其他组件受影响
-    window.removeEventListener("scroll", this.hanldescroll)
+    window.removeEventListener('scroll', this.hanldescroll)
   },
   components: {},
 
@@ -65,9 +65,7 @@ export default {
       } else {
         this.showabs = true
       }
-    },
-
-
+    }
 
   }
 }
