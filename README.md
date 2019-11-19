@@ -1,3 +1,4 @@
+
 <p align="center">
   <img width="500" height="500" src="./src/assets/QQ截图20191119120409.png">
 </p>
@@ -15,6 +16,7 @@
     <img src="https://img.shields.io/badge/vuex-3.1.1-blue.svg" alt="vue">
   </a>
 </p>
+
 ### A project that mimics the travel App where to go which is only a small part completed but includes a complete framework for the vue development project
 
 ### It has: vue.js vue-router vuex axios ajax swiper better-scroll...
