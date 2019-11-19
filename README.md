@@ -1,7 +1,20 @@
-# travel
-
-# Travel
-
+<p align="center">
+  <img width="500" height="500" src="./src/assets/QQ截图20191119120409.png">
+</p>
+<p align="center">
+  <a href="https://github.com/vuejs/vue">
+    <img src="https://img.shields.io/badge/vue-2.5.1-blue.svg" alt="vue">
+  </a>
+  <a href="https://github.com/251205668/Travel">
+    <img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="license">
+  </a>
+<a href="https://router.vuejs.org/">
+    <img src="https://img.shields.io/badge/vuerouter-3.0.6-blue.svg" alt="vue">
+  </a>
+  <a href="https://vuex.vuejs.org/">
+    <img src="https://img.shields.io/badge/vuex-3.1.1-blue.svg" alt="vue">
+  </a>
+</p>
 ### A project that mimics the travel App where to go which is only a small part completed but includes a complete framework for the vue development project
 
 ### It has: vue.js vue-router vuex axios ajax swiper better-scroll...
