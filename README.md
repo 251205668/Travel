@@ -140,13 +140,13 @@ npm run build
 
 ## :bookmark_tabs:部分项目展示图
 ### 首页图
-![Home](./src/assets/项目截图/home.gif)
+![hme.gif](https://i.loli.net/2019/12/24/YXPQKqSElycBNai.gif)
 
 ### 城市页面
-![city](./src/assets/项目截图/city.gif)
+![city.gif](https://i.loli.net/2019/12/24/PCayUQgZVIE64vO.gif)
 
 ### 详情页面
-![detail](./src/assets/项目截图/detail.gif)
+![detail.gif](https://i.loli.net/2019/12/24/O8ewzv2RYTHbZ93.gif)
 
 ## :notebook_with_decorative_cover:开发文档
 关于这项目我在学习本课程时练习了两遍,之间记录了详细笔记,后面补上。。。[文档笔记](https://251205668.github.io/)
